@@ -290,23 +290,23 @@ button { font: inherit; background: none; border: none; cursor: pointer; }
 /* En mobile no hay mouse: el mismo control de "bajar" se ve como un slider vertical, con fondo crema sólido */
 @media (max-width: 640px) {
   .scroll-cue {
-    width: 24px;
-    height: 44px;
+    width: 18px;
+    height: 32px;
     background: var(--cream-50);
     border-color: var(--cream-300);
   }
   .scroll-cue span {
-    top: 8px;
+    top: 6px;
     left: 50%;
-    width: 9px;
-    height: 9px;
+    width: 6px;
+    height: 6px;
     background: var(--terracota);
     transform: translateX(-50%);
     animation-name: slidercue;
   }
   @keyframes slidercue {
-    0%, 100% { top: 8px; }
-    50% { top: 27px; }
+    0%, 100% { top: 6px; }
+    50% { top: 19px; }
   }
 }
 
@@ -422,22 +422,21 @@ button { font: inherit; background: none; border: none; cursor: pointer; }
 
 .team-social {
   margin-top: clamp(32px, 5vw, 48px);
-  display: inline-flex;
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 12px;
-  color: var(--olive-600);
-  font-size: .95rem;
+  gap: 18px;
 }
-.team-social a {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--olive-900);
+.team-social p { color: var(--olive-600); font-size: .95rem; }
+
+.btn-instagram {
+  background: linear-gradient(135deg, #f4a24b 0%, var(--terracota) 45%, #b3406f 100%);
+  color: var(--cream-50);
   font-weight: 500;
-  transition: color .3s var(--ease);
+  box-shadow: 0 6px 18px rgba(211, 103, 15, .28);
 }
-.team-social a:hover { color: var(--terracota); }
-.team-social svg { width: 20px; height: 20px; }
+.btn-instagram svg { width: 20px; height: 20px; }
+.btn-instagram:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(211, 103, 15, .38); }
 
 /* ---------- Servicios ---------- */
 .services-grid {
@@ -664,7 +663,12 @@ button { font: inherit; background: none; border: none; cursor: pointer; }
 }
 .contact-list a { transition: color .3s var(--ease); }
 .contact-list a:hover { color: var(--terracota); }
-.contact-cta { margin-top: 44px; }
+.contact-cta-group {
+  margin-top: 44px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
 
 /* ---------- Footer ---------- */
 .site-footer {
