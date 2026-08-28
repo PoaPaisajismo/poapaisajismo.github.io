@@ -37,18 +37,6 @@
     });
   }
 
-  // Hero photo carousel (crossfade)
-  var heroSlides = document.querySelectorAll(".hero-slide");
-  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (heroSlides.length > 1 && !reduceMotion) {
-    var current = 0;
-    setInterval(function () {
-      heroSlides[current].classList.remove("is-active");
-      current = (current + 1) % heroSlides.length;
-      heroSlides[current].classList.add("is-active");
-    }, 5500);
-  }
-
   // Scroll-reveal animations
   var reveals = document.querySelectorAll("[data-reveal]");
   if ("IntersectionObserver" in window && reveals.length) {
