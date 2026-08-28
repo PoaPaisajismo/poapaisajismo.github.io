@@ -287,17 +287,20 @@ button { font: inherit; background: none; border: none; cursor: pointer; }
   .scroll-cue span { animation: none; }
 }
 
-/* En mobile no hay mouse: el mismo control de "bajar" se ve como un slider horizontal */
+/* En mobile no hay mouse: el mismo control de "bajar" se ve como un slider horizontal, con fondo crema sólido */
 @media (max-width: 640px) {
   .scroll-cue {
     width: 46px;
     height: 22px;
+    background: var(--cream-50);
+    border-color: var(--cream-300);
   }
   .scroll-cue span {
     top: 50%;
     left: 6px;
     width: 9px;
     height: 9px;
+    background: var(--terracota);
     transform: translateY(-50%);
     animation-name: slidercue;
   }
